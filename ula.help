@@ -1,0 +1,17 @@
+Oper | sel
+aadd : 00000
+asub : 00001
+lxor : 01000
+lor  : 01001
+land : 01010
+lsl  : 01011
+lsr  : 01100
+asr  : 00010
+
+Cond | sel
+eq   : 10000
+ne   : 10001
+lt   : 10010
+ge   : 10011
+ltu  : 10100
+geu  : 10101

@@ -1,0 +1,16 @@
+v 4
+file . "pc.vhd" "295634a438112888172773b0fac18b97b6a06b39" "20240531205913.144":
+  entity pc at 1( 0) + 0 on 19;
+  architecture behaviour of pc at 15( 290) + 0 on 20;
+file . "ULA.vhd" "c5145bcbfe31ad6b89e9a3ed32ee306c972ca7bd" "20240531205913.143":
+  entity ula at 1( 0) + 0 on 17;
+  architecture behaviour of ula at 15( 295) + 0 on 18;
+file . "Reg8.vhd" "32638d9365b0f92a752e4ec1e1e5b5f499abf289" "20240531205913.141":
+  entity reg8 at 1( 0) + 0 on 15;
+  architecture behaviour of reg8 at 15( 278) + 0 on 16;
+file . "Reg32.vhd" "663246cd69aa8ac3f2c0f8b009e2d0337c3a1899" "20240531205913.139":
+  entity reg32 at 1( 0) + 0 on 13;
+  architecture behaviour of reg32 at 15( 281) + 0 on 14;
+file . "InstDecode.vhd" "404534edee6cdc8e4b7b26a01492cff9d8d3aabe" "20240531205913.137":
+  entity instdecode at 1( 0) + 0 on 11;
+  architecture behaviour of instdecode at 18( 443) + 0 on 12;
