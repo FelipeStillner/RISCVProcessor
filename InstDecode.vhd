@@ -4,9 +4,7 @@ USE ieee.numeric_std.ALL;
 
 ENTITY InstDecode IS
     PORT (
-        funct3 : IN UNSIGNED(2 DOWNTO 0);
-        funct7 : IN UNSIGNED(6 DOWNTO 0);
-        opc : IN UNSIGNED(6 DOWNTO 0);
+        inst : IN UNSIGNED(2 DOWNTO 0);
         read_reg, write_reg : OUT STD_LOGIC;
         lui : OUT STD_LOGIC;
         sel : OUT UNSIGNED(4 DOWNTO 0);
@@ -16,7 +14,17 @@ ENTITY InstDecode IS
 END ENTITY;
 
 ARCHITECTURE behaviour OF InstDecode IS
+
+SIGNAL funct3 : UNSIGNED(2 DOWNTO 0);
+SIGNAL funct7 : UNSIGNED(6 DOWNTO 0);
+SIGNAL opc : UNSIGNED(6 DOWNTO 0);
+
 BEGIN
+    -- FUNCT
+    opc <= inst(6 downto 0);
+    funct3 <= inst(14 downto 12);
+    funct7 <= inst(31 downto 25);
+
     -- JUMP
     jumpcond <= '1' WHEN opc = "1100011" ELSE
         '0';
